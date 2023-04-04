@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://8k4ywf3vq18d"]
+
+[ext_resource type="Texture2D" uid="uid://dymw3pbnfobfo" path="res://dev/art/forest_sprite_sheet.png" id="1_6loxq"]
+[ext_resource type="Script" path="res://tile_map.gd" id="2_8tas3"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yy7cy"]
+resource_name = "Forest"
+texture = ExtResource("1_6loxq")
+margins = Vector2i(2, 1)
+separation = Vector2i(0, 2)
+texture_region_size = Vector2i(497, 215)
+0:0/0 = 0
+0:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_xxfy6"]
+tile_shape = 3
+tile_layout = 3
+tile_offset_axis = 1
+tile_size = Vector2i(497, 215)
+sources/1 = SubResource("TileSetAtlasSource_yy7cy")
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_xxfy6")
+format = 2
+layer_0/name = "Ground"
+script = ExtResource("2_8tas3")
