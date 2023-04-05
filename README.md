@@ -2,7 +2,9 @@
 
 Next Up:
 	
-	Randomly spawn plant sprites in forest
+	Enemies
+	
+	Health and damage effects
 	
 	Basic offhand interactions with crystal ball
 

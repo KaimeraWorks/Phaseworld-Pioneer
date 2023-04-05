@@ -60,8 +60,8 @@
      id="layer1">
     <path
        sodipodi:type="star"
-       style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="path163"
+       style="fill:#808080"
+       id="path1028"
        inkscape:flatsided="true"
        sodipodi:sides="6"
        sodipodi:cx="0"
@@ -73,6 +73,6 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="M 250,2.9453413e-6 125,216.50635 l -250,0 L -250,2.9453413e-6 -125,-216.50635 l 250,0 z"
-       transform="scale(0.26476236,0.13216518)" />
+       transform="scale(0.26458333,0.13229166)" />
   </g>
 </svg>
