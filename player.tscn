@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dl7ueq4fuwy0n"]
+[gd_scene load_steps=3 format=3 uid="uid://me4lagprspnj"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_vu4vb"]
 [ext_resource type="Texture2D" uid="uid://tjcqkhh86bp3" path="res://dev/art/human_m.png" id="1_wkkej"]
 
-[node name="Player" type="Area2D"]
+[node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_vu4vb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -11,4 +11,3 @@ texture = ExtResource("1_wkkej")
 offset = Vector2(0, -25)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position_smoothing_enabled = true

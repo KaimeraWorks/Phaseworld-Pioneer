@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr3j6p3hqm5ai"]
+
+[ext_resource type="Script" path="res://weapon.gd" id="1_0y86l"]
+
+[node name="Weapon" type="Node"]
+script = ExtResource("1_0y86l")
+
+[node name="Charge Start Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Quick Action Cooldown Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Charge Start Timer" to="." method="_on_charge_start_timer_timeout"]
