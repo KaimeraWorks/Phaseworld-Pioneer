@@ -6,10 +6,13 @@ signal moved(player_position)
 @export var friction = 50
 
 var movement_locked = false
+var main_hand_weapon = null
+var off_hand_weapon = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	moved.emit(position)
+	equip_weapon("rapier", true) # Temporary
 
 func _physics_process(delta):
 	var walking = false
@@ -29,6 +32,15 @@ func _physics_process(delta):
 		move_and_slide()
 	else:
 		movement_locked = false
+
+func equip_weapon(weapon_name, main_hand):
+	var new_weapon = WeaponDatabase.weapon[weapon_name]["scene"].instantiate() # Will need different code for pickups
+	if main_hand:
+		main_hand_weapon = new_weapon # Add code for unequipping and swapping
+	else:
+		off_hand_weapon = new_weapon
+	new_weapon.triggered_dash.connect(_on_triggered_dash) # Will need more generic ability signal names
+	add_child(new_weapon)
 
 func _on_triggered_dash(angle_to_cursor, magnitude):
 	movement_locked = true

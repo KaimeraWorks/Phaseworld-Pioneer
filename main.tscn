@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5g206nulwkyv"]
+[gd_scene load_steps=3 format=3 uid="uid://b5g206nulwkyv"]
 
 [ext_resource type="PackedScene" uid="uid://8k4ywf3vq18d" path="res://tile_map.tscn" id="1_cc2s7"]
 [ext_resource type="PackedScene" uid="uid://me4lagprspnj" path="res://player.tscn" id="2_3oi73"]
-[ext_resource type="PackedScene" uid="uid://burk4wrmfegqx" path="res://rapier.tscn" id="3_bfsu2"]
 
 [node name="Main" type="Node"]
 
@@ -10,7 +9,4 @@
 
 [node name="Player" parent="." instance=ExtResource("2_3oi73")]
 
-[node name="Rapier" parent="Player" instance=ExtResource("3_bfsu2")]
-
 [connection signal="moved" from="Player" to="TileMap" method="_on_player_moved"]
-[connection signal="triggered_dash" from="Player/Rapier" to="Player" method="_on_triggered_dash"]

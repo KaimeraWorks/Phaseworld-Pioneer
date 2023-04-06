@@ -5,9 +5,11 @@ extends TileMap
 var player_occupied_cell = null
 var void_memory = FastNoiseLite.new()
 var void_growth = FastNoiseLite.new()
+var void_enemy = FastNoiseLite.new()
 var growth_database = {}
 
 var plant = preload("res://plant.tscn") # Temporary
+var enemy = preload("res://enemy.tscn") # Temporary
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,6 +17,8 @@ func _ready():
 	void_memory.frequency = 0.05
 	void_growth.seed = randi()
 	void_growth.frequency = 0.1
+	void_enemy.seed = randi()
+	void_enemy.frequency = 0.05
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -52,14 +56,19 @@ func imagine_cell(cell):
 	var cell_flatness = cell_radius * sqrt(3) / 2 / cell_apothem
 	for x in range(cell_center.x - cell_radius, cell_center.x + cell_radius, randi_range(25, 50)):
 		for y in range(cell_center.y - cell_apothem, cell_center.y + cell_apothem, randi_range(25, 50)):
-			if (x - cell_center.x) ** 2 / (cell_apothem * cell_flatness) ** 2 + (y - cell_center.y) ** 2 / (cell_apothem) ** 2 <= 1 and void_growth.get_noise_2d(x, y) + 1 > (1.25 if cell_essence == 0 else 1):
-				var new_plant = plant.instantiate()
-				new_plant.position = Vector2(x, y)
-				if growth_database.has(cell):
-					growth_database[cell].append(new_plant)
-				else:
-					growth_database[cell] = [new_plant]
-				add_child(new_plant)
+			if (x - cell_center.x) ** 2 / (cell_apothem * cell_flatness) ** 2 + (y - cell_center.y) ** 2 / (cell_apothem) ** 2 <= 1:
+				if void_growth.get_noise_2d(x, y) + 1 > (1.25 if cell_essence == 0 else 1):
+					var new_plant = plant.instantiate()
+					new_plant.position = Vector2(x, y)
+					if growth_database.has(cell):
+						growth_database[cell].append(new_plant)
+					else:
+						growth_database[cell] = [new_plant]
+					add_child(new_plant)
+				elif void_enemy.get_noise_2d(x, y) + 1 > (1.75 if cell_essence == 0 else 1.5):
+					var new_enemy = enemy.instantiate()
+					new_enemy.position = Vector2(x, y)
+					add_child(new_enemy)
 
 func get_cell_essence(cell):
 	var memory_strength = randf_range(0, 1)
