@@ -2,7 +2,7 @@
 
 Next Up:
 	
-	Enemies
+	Move all weapon code into player, instead putting weapon properties into the database
 	
 	Health and damage effects
 	
