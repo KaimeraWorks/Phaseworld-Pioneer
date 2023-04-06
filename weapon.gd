@@ -5,6 +5,7 @@ signal triggered_dash(angle_to_cursor, magnitude)
 const CHARGE_START_DELAY = 0.33
 const CHARGE_MAX = 100
 
+@export var weapon_type: String = "weapon"
 @export var trigger: String = "melee"
 @export var initial_charge: int = 0
 @export var charge_speed: int = 0

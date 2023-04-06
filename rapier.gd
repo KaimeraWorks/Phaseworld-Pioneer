@@ -1,7 +1,7 @@
 extends "res://weapon.gd"
 
-# Called when the node enters the scene tree for the first time.
 func init_stats():
+	weapon_type = "rapier"
 	trigger = "melee"
 	initial_charge = 50
 	charge_speed = 100
