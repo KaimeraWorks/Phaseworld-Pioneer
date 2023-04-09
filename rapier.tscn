@@ -1,7 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://burk4wrmfegqx"]
-
-[ext_resource type="PackedScene" uid="uid://dr3j6p3hqm5ai" path="res://weapon.tscn" id="1_g7i7i"]
-[ext_resource type="Script" path="res://rapier.gd" id="2_ecawg"]
-
-[node name="Rapier" instance=ExtResource("1_g7i7i")]
-script = ExtResource("2_ecawg")

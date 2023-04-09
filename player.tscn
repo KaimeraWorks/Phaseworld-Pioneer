@@ -1,20 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://me4lagprspnj"]
+[gd_scene load_steps=4 format=3 uid="uid://me4lagprspnj"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_vu4vb"]
 [ext_resource type="Texture2D" uid="uid://tjcqkhh86bp3" path="res://dev/art/human_m.png" id="1_wkkej"]
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cxcx7"]
+radius = 18.0
+height = 48.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_vu4vb")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_wkkej")
-offset = Vector2(0, -25)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.5, 0.5)
 
 [node name="Label" type="Label" parent="."]
 offset_left = -20.0
 offset_top = -73.0
 offset_right = 20.0
 offset_bottom = -50.0
+
+[node name="Charge Start Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Quick Action Cooldown Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_cxcx7")
+
+[connection signal="timeout" from="Charge Start Timer" to="." method="_on_charge_start_timer_timeout"]

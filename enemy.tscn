@@ -1,10 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://mhqige6ukiau"]
+[gd_scene load_steps=4 format=3 uid="uid://mhqige6ukiau"]
 
 [ext_resource type="Texture2D" uid="uid://bgnpivacd05y7" path="res://dev/art/orc.png" id="1_1dcq5"]
 [ext_resource type="Script" path="res://enemy.gd" id="1_xf1iq"]
 
-[node name="Enemy" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_udtg0"]
+radius = 20.0
+height = 50.0
+
+[node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
 script = ExtResource("1_xf1iq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_1dcq5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_udtg0")

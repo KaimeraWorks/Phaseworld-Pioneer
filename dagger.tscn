@@ -1,7 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxkjwei25rnfy"]
-
-[ext_resource type="PackedScene" uid="uid://dr3j6p3hqm5ai" path="res://weapon.tscn" id="1_ovg53"]
-[ext_resource type="Script" path="res://dagger.gd" id="2_mlj3j"]
-
-[node name="Dagger" instance=ExtResource("1_ovg53")]
-script = ExtResource("2_mlj3j")

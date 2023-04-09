@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://but8yelvgec55"]
+
+[ext_resource type="PackedScene" uid="uid://dvekcw7bsux57" path="res://attacks/attack_animation.tscn" id="1_406c2"]
+[ext_resource type="Texture2D" uid="uid://cpp2xl8mlmwju" path="res://dev/art/rapier_lunge.png" id="2_8lngg"]
+
+[node name="Rapier Lunge" instance=ExtResource("1_406c2")]
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, -50)
+texture = ExtResource("2_8lngg")
+
+[node name="CollisionPolygon2D" parent="." index="1"]
+position = Vector2(0, -50)
+polygon = PackedVector2Array(0, -75, 50, 20, -50, 20)

@@ -2,11 +2,19 @@
 
 Next Up:
 	
-	Move all weapon code into player, instead putting weapon properties into the database
 	
-	Health and damage effects
+
+Planned:
 	
-	Basic offhand interactions with crystal ball
+	Iframes for damage
+	
+	Mapgen based on environment values like temperature, precipitation, etc
+	
+	Elemental damage system
+	
+	Spawn location with no enemies
+	
+	UI
 
 Future Reference:
 	
