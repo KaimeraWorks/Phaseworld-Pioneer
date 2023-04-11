@@ -107,7 +107,7 @@ func _physics_process(delta):
 func take_damage(damage: int):
 	health -= damage
 	if health < 1:
-		queue_free()
+		get_tree().change_scene_to_file("res://main_menu.tscn")
 
 # Equipment
 func can_equip_weapon(weapon_name: String, main_hand: bool) -> bool:

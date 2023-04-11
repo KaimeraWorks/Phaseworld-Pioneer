@@ -5,7 +5,7 @@ extends CharacterBody2D
 @export var health = 1
 
 func _physics_process(delta):
-	if $"../../Player": # Make this more flexible
+	if get_node_or_null("../../Player"): # Make this more flexible
 		velocity = ($"../../Player".position - position).normalized() * walk_speed
 	else:
 		velocity.move_toward(Vector2.ZERO, friction)
