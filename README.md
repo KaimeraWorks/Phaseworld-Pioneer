@@ -8,13 +8,19 @@ Planned:
 	
 	Iframes for damage
 	
-	Mapgen based on environment values like temperature, precipitation, etc
-	
 	Elemental damage system
 	
 	Spawn location with no enemies
 	
 	UI
+	
+	Cleaner mapgen with nicer looking stuff
+	
+	Additional layer on tileset with decor
+	
+	High aberrance generates holes in map and other "weird" structures
+	
+	Review mapgen to make sure no all floats are rounded to ints and not floored
 
 Future Reference:
 	

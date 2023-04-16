@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgds812u66ysn"
-path="res://.godot/imported/hex_forest.png-70e472de975100de8612b68a53fc7ca2.ctex"
+uid="uid://decemrsge80g1"
+path="res://.godot/imported/tileset_template.png-f0c3109db7415d78a54d9880ae1d6c73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dev/art/hex_forest.png"
-dest_files=["res://.godot/imported/hex_forest.png-70e472de975100de8612b68a53fc7ca2.ctex"]
+source_file="res://dev/art/tileset_template.png"
+dest_files=["res://.godot/imported/tileset_template.png-f0c3109db7415d78a54d9880ae1d6c73.ctex"]
 
 [params]
 

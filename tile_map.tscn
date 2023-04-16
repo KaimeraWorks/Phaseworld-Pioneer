@@ -1,16 +1,23 @@
 [gd_scene load_steps=5 format=3 uid="uid://8k4ywf3vq18d"]
 
-[ext_resource type="Texture2D" uid="uid://fd0ob4phrxgv" path="res://dev/art/forest_tileset.png" id="1_c4yrd"]
+[ext_resource type="Texture2D" uid="uid://cs1bpp0ilygm8" path="res://dev/art/default_tileset.png" id="1_5q8q2"]
 [ext_resource type="Script" path="res://tile_map.gd" id="2_8tas3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yy7cy"]
-resource_name = "Forest"
-texture = ExtResource("1_c4yrd")
+resource_name = "Default"
+texture = ExtResource("1_5q8q2")
 margins = Vector2i(10, 10)
-separation = Vector2i(20, 20)
+separation = Vector2i(10, 10)
 texture_region_size = Vector2i(500, 217)
 0:0/0 = 0
 0:1/0 = 0
+1:0/0 = 0
+1:1/0 = 0
+2:0/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_xxfy6"]
 tile_shape = 3
