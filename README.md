@@ -2,7 +2,7 @@
 
 Next Up:
 	
-	Make neighbor tile calculations use "memory" neighbors for weaker values instead
+
 
 Planned:
 	
@@ -17,6 +17,8 @@ Planned:
 	Spawn location with no enemies
 	
 	UI
+	
+	Make neighbor tile calculations use "memory" neighbors for weaker values instead
 	
 	Cleaner mapgen with nicer looking stuff
 	
