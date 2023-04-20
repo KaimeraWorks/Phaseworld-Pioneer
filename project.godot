@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+Gamemaster="*res://gamemaster.tscn"
 WeaponDatabase="*res://weapon_database.gd"
 
 [input]

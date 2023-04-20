@@ -12,13 +12,15 @@ func _ready():
 	humidity.seed = randi()
 	humidity.frequency = 0.05
 	temperature.seed = randi()
-	temperature.frequency = 0.05
+	temperature.frequency = 0.01
 	aberrance.seed = randi()
-	aberrance.frequency = 0.05
+	aberrance.frequency = 0.01
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	map_radius = ceili(Gamemaster.light_mana / 20)
+	# Redraw map if map radius ever changes, replace _on_player_moved
+	# Game over if reaches 0
 
 func _on_player_moved(player_position):
 	var player_new_cell = local_to_map(player_position)
@@ -43,7 +45,7 @@ func imagine_cell(cell):
 	set_cell(0, cell, 1, get_cell_essence(cell))
 
 func get_cell_essence(cell) -> Vector2i:
-	var local_aberrance_multiplier: float = aberrance.get_noise_2dv(cell)
+	var local_aberrance_multiplier: float = 0 # aberrance.get_noise_2dv(cell) Make this have special weird tiles, not just change the terrain
 	var local_humidity: float = clampf(humidity.get_noise_2dv(cell) + local_aberrance_multiplier * randf_range(-1, 1), -1, 1)
 	var local_temperature: float = clampf(temperature.get_noise_2dv(cell) + local_aberrance_multiplier * randf_range(-1, 1), -1, 1)
 	var memory_essence: Vector2i = Vector2i(floori((local_humidity + 1) * 1.5), floori((local_temperature + 1) * 1.5))
