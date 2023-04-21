@@ -3,12 +3,14 @@
 Next Up:
 	
 	Add encroaching shadows on map that either replace or complement light meter
-
-Planned:
 	
 	Redraw map whenever radius value changes, trigger it internally instead of just on player move signal
 	
 	Make game end when map radius reaches 0
+	
+	Cleanup gamemaster and hud scripts
+
+Planned:
 	
 	Iframes for damage
 	
