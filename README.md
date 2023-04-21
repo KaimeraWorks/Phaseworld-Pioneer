@@ -30,8 +30,6 @@ Planned:
 	
 	Cooler looking HP, Mana, Light bars - think Path of Exile
 	
-	Make Gamemaster variable updates emit signals instead of checking for them in process on other scripts
-	
 	Add encroaching shadows on map that either replace or complement light meter
 
 Future Reference:
