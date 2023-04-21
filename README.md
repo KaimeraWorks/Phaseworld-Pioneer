@@ -1,8 +1,8 @@
-# Phaseworld Pioneer
+# Phase Pioneer
 
 Next Up:
 	
-
+	Add encroaching shadows on map that either replace or complement light meter
 
 Planned:
 	
@@ -16,10 +16,6 @@ Planned:
 	
 	Spawn location with no enemies
 	
-	UI
-	
-	Make neighbor tile calculations use "memory" neighbors for weaker values instead
-	
 	Cleaner mapgen with nicer looking stuff
 	
 	Additional layer on tileset with decor
@@ -32,7 +28,8 @@ Planned:
 	
 	Cooler looking HP, Mana, Light bars - think Path of Exile
 	
-	Add encroaching shadows on map that either replace or complement light meter
+	
+	Make neighbor tile calculations use "memory" neighbors for weaker values instead
 
 Future Reference:
 	
