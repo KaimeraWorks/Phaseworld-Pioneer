@@ -1,8 +1,9 @@
 extends TileMap
 
-@export var map_radius: int = 3
+@export var light_power: int = 20
 
 var player_occupied_cell = null
+var map_radius: int = 0
 var humidity: FastNoiseLite = FastNoiseLite.new()
 var temperature: FastNoiseLite = FastNoiseLite.new()
 var aberrance: FastNoiseLite = FastNoiseLite.new()
@@ -15,28 +16,40 @@ func _ready():
 	temperature.frequency = 0.01
 	aberrance.seed = randi()
 	aberrance.frequency = 0.01
+	player_occupied_cell = local_to_map($Player.position)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	map_radius = ceili(Gamemaster.light_mana / 20)
+	pass
 	# Redraw map if map radius ever changes, replace _on_player_moved
 	# Game over if reaches 0
+
+func _on_light_mana_changed(new_light_mana) -> void:
+	var new_map_radius = ceili(new_light_mana / light_power)
+	if new_map_radius == 0:
+		$Player.take_damage(1) # Very hacky, fix this later
+	if new_map_radius != map_radius:
+		map_radius = new_map_radius
+		draw_map()
 
 func _on_player_moved(player_position):
 	var player_new_cell = local_to_map(player_position)
 	if player_new_cell != player_occupied_cell:
 		player_occupied_cell = player_new_cell
-		var mapped_cells = []
-		for q in range(-map_radius, map_radius + 1):
-			for r in range(-map_radius - q if q < 0 else -map_radius, map_radius - q + 1 if q > 0 else map_radius + 1):
-				mapped_cells.append(Vector2i(q + player_occupied_cell.x, r + player_occupied_cell.y))
-		for cell in get_used_cells(0):
-			if cell not in mapped_cells:
-				forget_cell(cell)
-			else:
-				mapped_cells.erase(cell)
-		for cell in mapped_cells:
-			imagine_cell(cell)
+		draw_map()
+
+func draw_map() -> void:
+	var mapped_cells = []
+	for q in range(-map_radius, map_radius + 1):
+		for r in range(-map_radius - q if q < 0 else -map_radius, map_radius - q + 1 if q > 0 else map_radius + 1):
+			mapped_cells.append(Vector2i(q + player_occupied_cell.x, r + player_occupied_cell.y))
+	for cell in get_used_cells(0):
+		if cell not in mapped_cells:
+			forget_cell(cell)
+		else:
+			mapped_cells.erase(cell)
+	for cell in mapped_cells:
+		imagine_cell(cell)
 
 func forget_cell(cell):
 	erase_cell(0, cell)

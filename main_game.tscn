@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://2nsmxvyq5vdk"]
+
+[ext_resource type="Script" path="res://main_game.gd" id="1_qjsbs"]
+[ext_resource type="PackedScene" uid="uid://8k4ywf3vq18d" path="res://tile_map.tscn" id="2_hyxbu"]
+[ext_resource type="PackedScene" uid="uid://bsr021glkhxt" path="res://hud.tscn" id="4_pxw73"]
+
+[node name="Main Game" type="Node"]
+script = ExtResource("1_qjsbs")
+
+[node name="TileMap" parent="." instance=ExtResource("2_hyxbu")]
+
+[node name="HUD" parent="." instance=ExtResource("4_pxw73")]
+
+[node name="LightManaTimer" type="Timer" parent="."]
+
+[connection signal="light_mana_changed" from="." to="TileMap" method="_on_light_mana_changed"]
+[connection signal="light_mana_changed" from="." to="HUD" method="_on_light_mana_changed"]
+[connection signal="timeout" from="LightManaTimer" to="." method="_on_light_mana_timer_timeout"]

@@ -46,8 +46,6 @@ func _ready():
 	health = max_health
 	# Intrascene
 	$"Charge Start Timer".set_wait_time(charge_start_delay)
-	# Interscene
-	moved.emit(position)
 	# Temporary
 	equip_weapon("rapier", true)
 	equip_weapon("orb", false)
