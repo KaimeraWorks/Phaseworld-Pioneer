@@ -1,8 +1,6 @@
 # Phase Pioneer
 
 Next Up:
-	
-	Cleanup main_game, hud scripts for consistency
 
 Planned:
 	

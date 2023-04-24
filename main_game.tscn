@@ -7,11 +7,11 @@
 [node name="Main Game" type="Node"]
 script = ExtResource("1_qjsbs")
 
+[node name="LightManaTimer" type="Timer" parent="."]
+
 [node name="TileMap" parent="." instance=ExtResource("2_hyxbu")]
 
 [node name="HUD" parent="." instance=ExtResource("4_pxw73")]
-
-[node name="LightManaTimer" type="Timer" parent="."]
 
 [connection signal="light_mana_changed" from="." to="TileMap" method="_on_light_mana_changed"]
 [connection signal="light_mana_changed" from="." to="HUD" method="_on_light_mana_changed"]

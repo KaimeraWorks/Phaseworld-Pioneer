@@ -24,7 +24,7 @@ func _process(delta):
 	# Redraw map if map radius ever changes, replace _on_player_moved
 	# Game over if reaches 0
 
-func _on_light_mana_changed(new_light_mana) -> void:
+func _on_light_mana_changed(new_light_mana, current_light_mana_max) -> void:
 	var new_map_radius = ceili(new_light_mana / light_power)
 	if new_map_radius == 0:
 		$Player.take_damage(1) # Very hacky, fix this later
