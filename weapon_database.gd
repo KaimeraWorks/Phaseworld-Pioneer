@@ -7,7 +7,7 @@ var weapon = {
 			"dagger": "Duelist",
 			"orb": "Red Mage",
 			"pistol": "Swashbuckler",
-			"rilfe": "Musketeer"
+			"rifle": "Musketeer"
 		},
 		"quick_action_main_hand": {
 			"action": [

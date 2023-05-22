@@ -4,6 +4,14 @@ Next Up:
 
 Planned:
 	
+	Start making base classes
+	
+		Tilesets need standardization
+	
+	Add Library/Codex thing
+	
+		Do that fancy thing where library entries have link text like a wiki
+	
 	Cleanup player, tile_map scripts for consistency
 	
 	Add encroaching shadows on map that either replace or complement light meter
