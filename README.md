@@ -36,6 +36,7 @@ Planned:
 	
 	Cooler looking HP, Mana, Light bars - think Path of Exile
 	
+	Figure out what player group is being used for - forgot
 	
 	Make neighbor tile calculations use "memory" neighbors for weaker values instead
 
