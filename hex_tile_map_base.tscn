@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://dg5lg01gxjmxy"]
+
+[ext_resource type="Texture2D" uid="uid://ck88mo30s66ua" path="res://dev/art/arena_tileset.png" id="1_frl34"]
+[ext_resource type="Texture2D" uid="uid://cs1bpp0ilygm8" path="res://dev/art/default_tileset.png" id="2_iuqgs"]
+[ext_resource type="PackedScene" uid="uid://me4lagprspnj" path="res://player.tscn" id="3_fat6d"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_44ys3"]
+texture = ExtResource("1_frl34")
+margins = Vector2i(10, 10)
+separation = Vector2i(10, 10)
+texture_region_size = Vector2i(500, 217)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-250, 0, -125, -108.5, 125, -108.5, 250, 0, 125, 108.5, -125, 108.5)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0pde6"]
+texture = ExtResource("2_iuqgs")
+margins = Vector2i(10, 10)
+separation = Vector2i(10, 10)
+texture_region_size = Vector2i(500, 217)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_jr3ww"]
+tile_shape = 3
+tile_layout = 3
+tile_offset_axis = 1
+tile_size = Vector2i(500, 217)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_44ys3")
+sources/1 = SubResource("TileSetAtlasSource_0pde6")
+
+[node name="HexTileMapBase" type="TileMap"]
+tile_set = SubResource("TileSet_jr3ww")
+format = 2
+layer_0/name = "Ground"
+
+[node name="Player" parent="." instance=ExtResource("3_fat6d")]
+motion_mode = 1

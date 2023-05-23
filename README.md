@@ -1,12 +1,13 @@
 # Phase Pioneer
 
 Next Up:
+	
+		Start making base classes
+	
+			Tilesets need standardization - Arena uses HexTileMapBase now, make sure overworld map does too and
+			give the base some common script elements
 
 Planned:
-	
-	Start making base classes
-	
-		Tilesets need standardization
 	
 	Add Library/Codex thing
 	
