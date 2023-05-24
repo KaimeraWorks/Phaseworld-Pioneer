@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dg5lg01gxjmxy"]
+[gd_scene load_steps=10 format=3 uid="uid://dg5lg01gxjmxy"]
 
 [ext_resource type="Texture2D" uid="uid://ck88mo30s66ua" path="res://dev/art/arena_tileset.png" id="1_frl34"]
 [ext_resource type="Texture2D" uid="uid://cs1bpp0ilygm8" path="res://dev/art/default_tileset.png" id="2_iuqgs"]
 [ext_resource type="PackedScene" uid="uid://me4lagprspnj" path="res://player.tscn" id="3_fat6d"]
 [ext_resource type="Script" path="res://hex_tile_map_base.gd" id="3_yjdbp"]
+[ext_resource type="Script" path="res://status_effect_handler.gd" id="4_sh82y"]
 [ext_resource type="PackedScene" uid="uid://bsr021glkhxt" path="res://hud.tscn" id="5_fykfu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_44ys3"]
@@ -68,6 +69,9 @@ layer_0/name = "Ground"
 script = ExtResource("3_yjdbp")
 
 [node name="LightEnergyTimer" type="Timer" parent="."]
+
+[node name="StatusEffectHandler" type="Node" parent="."]
+script = ExtResource("4_sh82y")
 
 [node name="Player" parent="." instance=ExtResource("3_fat6d")]
 motion_mode = 1
