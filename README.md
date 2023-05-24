@@ -2,6 +2,10 @@
 
 Next Up:
 	
+		Look into using custom resources for effects and to replace autoload for weapons
+		So weapons and effects are custom classes that load these resources which can be edited outside
+		of Godot engine. Resources can also be used for the in game library/codex info.
+	
 		Effect management
 		
 			Autoload? Inner classes of an effect manager class?
