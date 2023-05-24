@@ -1,7 +1,8 @@
 extends CanvasLayer
 
 # Runtime Vars
-var light_mana_meter_tween: Tween = null
+var light_energy_meter_value_tween: Tween = null
+var light_energy_meter_max_tween: Tween = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,9 +12,15 @@ func _ready():
 func _process(delta):
 	pass
 
-func _on_light_mana_changed(new_light_mana: int, current_light_mana_max: int) -> void:
-	var meter_ratio: int = new_light_mana * $LightManaMeter.max_value / current_light_mana_max
-	if light_mana_meter_tween != null:
-		light_mana_meter_tween.kill()
-	light_mana_meter_tween = create_tween()
-	light_mana_meter_tween.tween_property($LightManaMeter, "value", meter_ratio, 1)
+func _on_light_energy_changed(new_light_energy: int) -> void:
+	if light_energy_meter_value_tween != null:
+		light_energy_meter_value_tween.kill()
+	light_energy_meter_value_tween = create_tween()
+	light_energy_meter_value_tween.tween_property($LightEnergyMeter, "value", new_light_energy, 1)
+
+
+func _on_light_energy_max_changed(new_light_energy_max):
+	if light_energy_meter_max_tween != null:
+		light_energy_meter_max_tween.kill()
+	light_energy_meter_max_tween = create_tween()
+	light_energy_meter_max_tween.tween_property($LightEnergyMeter, "max_value", new_light_energy_max, 1)

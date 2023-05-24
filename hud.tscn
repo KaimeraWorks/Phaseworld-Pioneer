@@ -8,7 +8,7 @@
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_l11vx")
 
-[node name="LightManaMeter" type="TextureProgressBar" parent="."]
+[node name="LightEnergyMeter" type="TextureProgressBar" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5

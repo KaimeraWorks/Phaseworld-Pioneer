@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dg5lg01gxjmxy"]
+[gd_scene load_steps=9 format=3 uid="uid://dg5lg01gxjmxy"]
 
 [ext_resource type="Texture2D" uid="uid://ck88mo30s66ua" path="res://dev/art/arena_tileset.png" id="1_frl34"]
 [ext_resource type="Texture2D" uid="uid://cs1bpp0ilygm8" path="res://dev/art/default_tileset.png" id="2_iuqgs"]
 [ext_resource type="PackedScene" uid="uid://me4lagprspnj" path="res://player.tscn" id="3_fat6d"]
+[ext_resource type="Script" path="res://hex_tile_map_base.gd" id="3_yjdbp"]
+[ext_resource type="PackedScene" uid="uid://bsr021glkhxt" path="res://hud.tscn" id="5_fykfu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_44ys3"]
 texture = ExtResource("1_frl34")
@@ -63,6 +65,15 @@ sources/1 = SubResource("TileSetAtlasSource_0pde6")
 tile_set = SubResource("TileSet_jr3ww")
 format = 2
 layer_0/name = "Ground"
+script = ExtResource("3_yjdbp")
+
+[node name="LightEnergyTimer" type="Timer" parent="."]
 
 [node name="Player" parent="." instance=ExtResource("3_fat6d")]
 motion_mode = 1
+
+[node name="HUD" parent="." instance=ExtResource("5_fykfu")]
+
+[connection signal="light_energy_changed" from="." to="HUD" method="_on_light_energy_changed"]
+[connection signal="light_energy_max_changed" from="." to="HUD" method="_on_light_energy_max_changed"]
+[connection signal="timeout" from="LightEnergyTimer" to="." method="_on_light_energy_timer_timeout"]
