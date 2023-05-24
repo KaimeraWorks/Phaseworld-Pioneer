@@ -2,6 +2,12 @@
 
 Next Up:
 	
+		Effect management
+		
+			Autoload? Inner classes of an effect manager class?
+			
+			First effect: Light of the Nexus - prevents light energy drain, for use in arena
+	
 		Start making base classes
 	
 			Tilesets need standardization - Arena uses HexTileMapBase now, make sure overworld map does too and
