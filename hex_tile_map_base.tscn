@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cs1bpp0ilygm8" path="res://dev/art/default_tileset.png" id="2_iuqgs"]
 [ext_resource type="PackedScene" uid="uid://me4lagprspnj" path="res://player.tscn" id="3_fat6d"]
 [ext_resource type="Script" path="res://hex_tile_map_base.gd" id="3_yjdbp"]
-[ext_resource type="Script" path="res://status_effect_handler.gd" id="4_sh82y"]
+[ext_resource type="PackedScene" uid="uid://dqffvooyvqko6" path="res://status_effect_handler.tscn" id="4_kfamq"]
 [ext_resource type="PackedScene" uid="uid://bsr021glkhxt" path="res://hud.tscn" id="5_fykfu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_44ys3"]
@@ -70,8 +70,7 @@ script = ExtResource("3_yjdbp")
 
 [node name="LightEnergyTimer" type="Timer" parent="."]
 
-[node name="StatusEffectHandler" type="Node" parent="."]
-script = ExtResource("4_sh82y")
+[node name="StatusEffectHandler" parent="." instance=ExtResource("4_kfamq")]
 
 [node name="Player" parent="." instance=ExtResource("3_fat6d")]
 motion_mode = 1

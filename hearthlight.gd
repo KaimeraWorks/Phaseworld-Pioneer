@@ -1,4 +1,6 @@
-class_name Hearthlight extends StatusEffect
+extends StatusEffectType
 
-func activation_effect() -> void:
+func application_effect(target: Node) -> void:
 	target.get_node("LightEnergyTimer").stop()
+
+# If Light Energy ends up being an actively usable resource, add periodic top-up

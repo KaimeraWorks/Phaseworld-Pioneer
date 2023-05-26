@@ -1,9 +1,11 @@
-[gd_resource type="Resource" script_class="Hearthlight" load_steps=2 format=3 uid="uid://c26ct7ec8bmm3"]
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cjt7sg5b78hsa"]
 
-[ext_resource type="Script" path="res://hearthlight.gd" id="1_1fe8i"]
+[ext_resource type="Script" path="res://hearthlight.gd" id="1_btwj4"]
 
 [resource]
-script = ExtResource("1_1fe8i")
+script = ExtResource("1_btwj4")
+name = "Hearthlight"
 is_field_effect = true
+is_unremovable = true
 duration = 0.0
-frequency = 0.0
+period = 0.0

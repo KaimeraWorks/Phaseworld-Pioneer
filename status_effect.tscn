@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6u8as8dyjv1y"]
+
+[ext_resource type="Script" path="res://status_effect.gd" id="1_07vfc"]
+
+[node name="StatusEffect" type="Node"]
+script = ExtResource("1_07vfc")
+
+[node name="ExpirationEffectTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="PeriodicEffectTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="ExpirationEffectTimer" to="." method="_on_expiration_effect_timer_timeout"]
+[connection signal="timeout" from="PeriodicEffectTimer" to="." method="_on_periodic_effect_timer_timeout"]

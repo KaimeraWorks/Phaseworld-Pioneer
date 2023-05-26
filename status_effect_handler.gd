@@ -1,17 +1,12 @@
-class_name StatusEffectHandler extends Node
+extends Node
 
-var status_effects: Array[StatusEffect] = []
+var status_effect_scene = preload("res://status_effect.tscn")
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-func apply_effect(effect_name: String):
-	var new_effect: StatusEffect = load(effect_name)
-	new_effect.target = get_parent()
-	status_effects.append(new_effect)
-	new_effect.activation_effect()
+func apply_effect(effect_type: StatusEffectType):
+	if effect_type.is_field_effect:
+		assert(get_parent() is HexTileMapBase, "Attempting to apply a field effect to something other than a tile map.")
+	else:
+		pass # Add an assert after creating a Node with a StatusEffectHandler for mobs to inherit
+	var new_status_effect = status_effect_scene.instantiate()
+	add_child(new_status_effect)
+	new_status_effect.activate(effect_type, get_parent())

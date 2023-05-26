@@ -1,4 +1,4 @@
-extends TileMap
+class_name HexTileMapBase extends TileMap
 
 #Signals
 signal light_energy_changed(new_light_energy: int)

@@ -5,6 +5,11 @@ Next Up:
 		Look into using custom resources for effects and to replace autoload for weapons
 		So weapons and effects are custom classes that load these resources which can be edited outside
 		of Godot engine. Resources can also be used for the in game library/codex info.
+		
+		Remove unecessary class_name and other type specification done to make autocomplete visible,
+		since that's just janky anyway. Instead rely on class type asserts to guarantee that function calls and
+		variable accesses missing in autocomplete are valid. Those asserts can use class_names. Otherwise,
+		use them exclusively for interfaces.
 	
 		Effect management
 		
