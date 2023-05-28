@@ -24,6 +24,15 @@ Next Up:
 
 Planned:
 	
+	Instead of Light meter, use a "reality sync" meter. Has positive and negative sides. Starts game with only positive side, 0 - 100. Closer to 0 means more and more debuffs
+	Still goes down over time. If it hits a minimum (-100?) you end your run.
+	
+		"Oneiromancy" stats/tree allows you to benefit from instability
+		
+			Capstone: Shifts your meter from 0 - 100 to -50 - 50, so always starts unstable and can overtune instability effects
+		
+		"Alethiomancy" stats/tree slows down or lets you control stability loss
+	
 	Add Library/Codex thing
 	
 		Do that fancy thing where library entries have link text like a wiki
