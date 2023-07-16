@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://mhqige6ukiau"]
 
-[ext_resource type="Texture2D" uid="uid://bgnpivacd05y7" path="res://dev/art/orc.png" id="1_1dcq5"]
-[ext_resource type="Script" path="res://enemy.gd" id="1_xf1iq"]
+[ext_resource type="Script" path="res://old/enemy.gd" id="1_rtcav"]
+[ext_resource type="Texture2D" uid="uid://bgnpivacd05y7" path="res://dev/art/orc.png" id="2_2giqv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_udtg0"]
 radius = 20.0
 height = 50.0
 
 [node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
-script = ExtResource("1_xf1iq")
+script = ExtResource("1_rtcav")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_1dcq5")
+texture = ExtResource("2_2giqv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_udtg0")

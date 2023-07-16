@@ -11,14 +11,14 @@ config_version=5
 [application]
 
 config/name="Phaseworld Pioneer"
-run/main_scene="res://zones/arena.tscn"
+run/main_scene="res://ui/main_menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-WeaponDatabase="*res://weapon_database.gd"
-LoreDatabase="*res://lore_database.gd"
+WeaponDatabase="*res://old/weapon_database.gd"
+LoreDatabase="*res://ui/lore_database.gd"
 
 [input]
 

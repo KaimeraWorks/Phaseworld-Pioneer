@@ -12,4 +12,4 @@ func _process(delta):
 
 
 func _on_new_game_pressed():
-	get_tree().change_scene_to_file("res://arena.tscn")
+	get_tree().change_scene_to_file("res://zones/arena.tscn")

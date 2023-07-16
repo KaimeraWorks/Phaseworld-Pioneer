@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://me4lagprspnj"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_vu4vb"]
-[ext_resource type="Texture2D" uid="uid://tjcqkhh86bp3" path="res://dev/art/human_m.png" id="1_wkkej"]
+[ext_resource type="Script" path="res://old/player.gd" id="1_72alo"]
+[ext_resource type="Texture2D" uid="uid://tjcqkhh86bp3" path="res://dev/art/human_m.png" id="2_pgcy7"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cxcx7"]
 radius = 18.0
 height = 48.0
 
 [node name="Player" type="CharacterBody2D" groups=["player"]]
-script = ExtResource("1_vu4vb")
+script = ExtResource("1_72alo")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_wkkej")
+texture = ExtResource("2_pgcy7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
