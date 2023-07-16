@@ -73,6 +73,19 @@ Planned:
 	
 	Make neighbor tile calculations use "memory" neighbors for weaker values instead
 
+ 	Universal blur (and other effects) on text when it changes mid-sentence, or when boss titles change, etc
+
+  	Skill tree unlock: after collecting 5 artifacts? Unlocks dungeons; once you're close to losing to the OP dungeon gatekeeper
+   	Vittoria shows up Mysterious Stranger style and oneshots it, unlocks your skill tree, tells you not to try dungeon or you'll 	die
+
+    	Town unlock: after completing one dungeon? Unlocks memorable vistas; before you can fight the guardian, Wynstan memes it to 	atoms and gives you the vista for free
+
+  	Story "training" bosses:
+
+   		Calypso of Light and Dark: Switches between attack types, shadows position and phantasms attack - Grants Pendulum 		casting style
+
+     		Calypso the Dreamer: Fantasy themed, glassblowing pipe used like a bubble wand, bubbles shatter and release 			butterflies - Grants Oneiromancy
+
 Future Reference:
 	
 	Make different enemies behave differently in response to de-manifested hexes - some disappear with the hexes, some
