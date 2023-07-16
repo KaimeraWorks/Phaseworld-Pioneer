@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ck88mo30s66ua" path="res://dev/art/arena_tileset.png" id="1_frl34"]
 [ext_resource type="Texture2D" uid="uid://cs1bpp0ilygm8" path="res://dev/art/default_tileset.png" id="2_iuqgs"]
 [ext_resource type="PackedScene" uid="uid://me4lagprspnj" path="res://player.tscn" id="3_fat6d"]
-[ext_resource type="Script" path="res://hex_tile_map_base.gd" id="3_yjdbp"]
+[ext_resource type="Script" path="res://zones/core/hex_tile_map_base.gd" id="3_yjdbp"]
 [ext_resource type="PackedScene" uid="uid://dqffvooyvqko6" path="res://status_effects/core/status_effect_handler.tscn" id="4_kfamq"]
 [ext_resource type="PackedScene" uid="uid://bsr021glkhxt" path="res://hud.tscn" id="5_fykfu"]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://duy4nowlo27ga"]
 
-[ext_resource type="PackedScene" uid="uid://dg5lg01gxjmxy" path="res://hex_tile_map_base.tscn" id="1_hr532"]
-[ext_resource type="Script" path="res://arena.gd" id="2_kenx1"]
+[ext_resource type="PackedScene" uid="uid://dg5lg01gxjmxy" path="res://zones/core/hex_tile_map_base.tscn" id="1_hr532"]
+[ext_resource type="Script" path="res://zones/arena.gd" id="2_kenx1"]
 [ext_resource type="Resource" uid="uid://cjt7sg5b78hsa" path="res://status_effects/hearthlight.tres" id="3_jgl8a"]
 
 [node name="Arena" instance=ExtResource("1_hr532")]
