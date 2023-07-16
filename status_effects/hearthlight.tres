@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=2 format=3 uid="uid://cjt7sg5b78hsa"]
 
-[ext_resource type="Script" path="res://hearthlight.gd" id="1_btwj4"]
+[ext_resource type="Script" path="res://status_effects/hearthlight.gd" id="1_btwj4"]
 
 [resource]
 script = ExtResource("1_btwj4")

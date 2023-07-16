@@ -16,3 +16,5 @@ func periodic_effect(target: Node) -> void:
 
 func expiration_effect(target: Node) -> void:
 	pass
+
+# Perhaps add removal effect function for when effect is manually removed

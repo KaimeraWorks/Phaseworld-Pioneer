@@ -6,16 +6,24 @@ Next Up:
 		So weapons and effects are custom classes that load these resources which can be edited outside
 		of Godot engine. Resources can also be used for the in game library/codex info.
 		
-		Remove unecessary class_name and other type specification done to make autocomplete visible,
+			Partially done for effects. Next is weapons. Note: bug with charged attack, seems to leave
+			behind a sprite?
+		
+		Remove unnecessary class_name and other type specification done to make autocomplete visible,
 		since that's just janky anyway. Instead rely on class type asserts to guarantee that function calls and
 		variable accesses missing in autocomplete are valid. Those asserts can use class_names. Otherwise,
 		use them exclusively for interfaces.
+		
+			Might be done, need to review.
 	
 		Effect management
 		
 			Autoload? Inner classes of an effect manager class?
 			
 			First effect: Light of the Nexus - prevents light energy drain, for use in arena
+			
+			Implemented as a "handler" that can be applied as a node to any object. Should probably
+			use this paradigm for all similar use cases.
 	
 		Start making base classes
 	

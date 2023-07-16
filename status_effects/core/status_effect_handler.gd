@@ -1,6 +1,6 @@
 extends Node
 
-var status_effect_scene = preload("res://status_effect.tscn")
+@export var status_effect_scene: PackedScene
 
 func apply_effect(effect_type: StatusEffectType):
 	if effect_type.is_field_effect:

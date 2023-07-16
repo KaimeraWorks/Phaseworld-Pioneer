@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqffvooyvqko6"]
+
+[ext_resource type="Script" path="res://status_effects/core/status_effect_handler.gd" id="1_ryrw0"]
+[ext_resource type="PackedScene" uid="uid://c6u8as8dyjv1y" path="res://status_effects/core/status_effect.tscn" id="2_th1ax"]
+
+[node name="StatusEffectHandler" type="Node"]
+script = ExtResource("1_ryrw0")
+status_effect_scene = ExtResource("2_th1ax")

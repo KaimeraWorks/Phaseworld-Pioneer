@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://c6u8as8dyjv1y"]
 
-[ext_resource type="Script" path="res://status_effect.gd" id="1_07vfc"]
+[ext_resource type="Script" path="res://status_effects/core/status_effect.gd" id="1_oxfb8"]
 
 [node name="StatusEffect" type="Node"]
-script = ExtResource("1_07vfc")
+script = ExtResource("1_oxfb8")
 
 [node name="ExpirationEffectTimer" type="Timer" parent="."]
 one_shot = true
