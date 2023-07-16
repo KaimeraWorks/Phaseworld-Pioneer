@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwn6vj0nvnm1x"]
+
+[ext_resource type="PackedScene" uid="uid://cakrpg7khpt06" path="res://creatures/core/creature.tscn" id="1_r27qj"]
+[ext_resource type="PackedScene" uid="uid://3ihqwlf6glj3" path="res://equipment/core/equipment_handler.tscn" id="2_dpo45"]
+[ext_resource type="PackedScene" uid="uid://ccc8ccqo2sfk1" path="res://equipment/core/main_hand.tscn" id="3_ngh6c"]
+[ext_resource type="PackedScene" uid="uid://duh4k8jqpwe6h" path="res://equipment/core/off_hand.tscn" id="4_6pgxc"]
+
+[node name="Angel" instance=ExtResource("1_r27qj")]
+
+[node name="EquipmentHandler" parent="." index="0" instance=ExtResource("2_dpo45")]
+
+[node name="MainHand" parent="EquipmentHandler" index="0" instance=ExtResource("3_ngh6c")]
+
+[node name="OffHand" parent="EquipmentHandler" index="1" instance=ExtResource("4_6pgxc")]
