@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="WeaponType" load_steps=2 format=3 uid="uid://b6rg308skmrny"]
+
+[ext_resource type="Script" path="res://equipment/core/weapon_type.gd" id="1_b03yv"]
+
+[resource]
+script = ExtResource("1_b03yv")
+name = "Rapier"
+valid_offhand_weapons = null

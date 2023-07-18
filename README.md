@@ -2,6 +2,8 @@
 
 Next Up:
 	
+	Continue implementing equipment as resources
+	
 		Look into using custom resources for effects and to replace autoload for weapons
 		So weapons and effects are custom classes that load these resources which can be edited outside
 		of Godot engine. Resources can also be used for the in game library/codex info.
@@ -78,13 +80,13 @@ Planned:
   	Skill tree unlock: after collecting 5 artifacts? Unlocks dungeons; once you're close to losing to the OP dungeon gatekeeper
    	Vittoria shows up Mysterious Stranger style and oneshots it, unlocks your skill tree, tells you not to try dungeon or you'll 	die
 
-    	Town unlock: after completing one dungeon? Unlocks memorable vistas; before you can fight the guardian, Wynstan memes it to 	atoms and gives you the vista for free
+		Town unlock: after completing one dungeon? Unlocks memorable vistas; before you can fight the guardian, Wynstan memes it to 	atoms and gives you the vista for free
 
   	Story "training" bosses:
 
    		Calypso of Light and Dark: Switches between attack types, shadows position and phantasms attack - Grants Pendulum 		casting style
 
-     		Calypso the Dreamer: Fantasy themed, glassblowing pipe used like a bubble wand, bubbles shatter and release 			butterflies - Grants Oneiromancy
+	 		Calypso the Dreamer: Fantasy themed, glassblowing pipe used like a bubble wand, bubbles shatter and release 			butterflies - Grants Oneiromancy
 
 Future Reference:
 	

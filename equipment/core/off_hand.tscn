@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://duh4k8jqpwe6h"]
-
-[ext_resource type="PackedScene" uid="uid://ccc8ccqo2sfk1" path="res://equipment/core/main_hand.tscn" id="1_e56dt"]
-
-[node name="OffHand" instance=ExtResource("1_e56dt")]
